@@ -1,8 +1,5 @@
 // Assignment code here
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
 //make variables for the different character types: lowercase, uppercase, numeric, special character
 var lowCase = "abcdefghijklmnopqrstuvwxyz";
 var upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -11,25 +8,23 @@ var char = ".+*?[^]$(){}=!<>|:-%&~`";
 var passLength = "";
 var password = "";
 
-
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);  
-
-
 // Write password to the #password input 
 function writePassword() {
+  console.log(passLength);
   password = "";
   var passwordText = document.querySelector("#password"); 
   var totalPass = "";
+  passLength = "";
 
   var passLength = prompt("How many characters would you like in your password?");
     console.log(passLength);
     if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
       window.alert("Please enter a whole number between 8 and 128.");
       writePassword();
+      return;
     }
     else {
+      passLength = Math.round(passLength);
       console.log(Math.round(passLength));
     }
   var includeLow = confirm("Would you like to include lower case letters in your password?");
@@ -68,15 +63,14 @@ function writePassword() {
     for (var i = 0; i < passLength; i++) {
       password += totalPass.charAt(Math.floor(Math.random() * totalPass.length));
     }
-    console.log(password); //logging just to make sure I'm on the right track
+    console.log(password); 
   }
 
   generatePassword();
+  debugger;
   console.log(password);
   passwordText.value = password;  
-
 }
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
