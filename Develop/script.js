@@ -67,7 +67,6 @@ function writePassword() {
   }
 
   generatePassword();
-  debugger;
   console.log(password);
   passwordText.value = password;  
 }
