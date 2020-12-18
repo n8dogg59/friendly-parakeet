@@ -4,7 +4,7 @@
 var lowCase = "abcdefghijklmnopqrstuvwxyz";
 var upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "1234567890";
-var char = ".+*?[^]$(){}=!<>|:-%&~`";
+var char = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 var passLength = "";
 var password = "";
 
