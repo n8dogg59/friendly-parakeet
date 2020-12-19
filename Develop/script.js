@@ -24,30 +24,48 @@ function writePassword() {
     }
     else {
       passLength = Math.round(passLength);
+      window.alert("You chose to have " + passLength + " characters in your password.");
+      console.log(passLength);
     }
-
+     
   //Determines if the user wants lower case letters in their password
   var includeLow = confirm("Would you like to include lower case letters in your password?");
     if (includeLow){
+      window.alert("You chose to include lower case letters in your password.");
       totalPass += lowCase;
+      console.log(totalPass);
+    } else {
+      window.alert("You chose to not include lower case letters in your password.");
     }
     
   //Determines if the user wants upper case letters in their password
   var includeUp = confirm("Would you like to include upper case letters in your password?");
     if (includeUp) {
+      window.alert("You chose to include upper case letters in your password.");
       totalPass += upCase;
+      console.log(totalPass);
+    } else {
+      window.alert("You chose to not include upper case letters in your password.");
     }
   
   //Determines if the user wants numbers in the password
   var includeNum = confirm ("Would you like to include numbers in your password?");
     if (includeNum) {
+      window.alert("You chose to inlcude numbers in your password.");
       totalPass += numbers;
+      console.log(totalPass);
+    } else {
+      window.alert("You chose not to include numbers in your password.");
     }
   
   //Determines if the user wants characters in their password
   var includeChar = confirm("Would you like to include special characters in your password?");
     if (includeChar) {
+      window.alert("You chose to include special characters in your password.");
       totalPass += char;
+      console.log(totalPass);
+    } else {
+      window.alert("You chose to not include special characters in your password.")
     }
   
   //Makes sure they selcted at least one set of characters
@@ -55,7 +73,7 @@ function writePassword() {
     window.alert("You have to choose at least one set of characters.");
     writePassword();
   }
-      
+       
   //generates the password
   var generatePassword = function () {
     password = "";
