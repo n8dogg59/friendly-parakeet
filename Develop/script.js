@@ -10,14 +10,13 @@ var password = "";
 
 // Write password to the #password input 
 function writePassword() {
-  console.log(passLength);
   password = "";
   var passwordText = document.querySelector("#password"); 
   var totalPass = "";
   passLength = "";
 
+  //collects the number of characters the user wants in the password
   var passLength = prompt("How many characters would you like in your password?");
-    console.log(passLength);
     if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
       window.alert("Please enter a whole number between 8 and 128.");
       writePassword();
@@ -25,49 +24,48 @@ function writePassword() {
     }
     else {
       passLength = Math.round(passLength);
-      console.log(Math.round(passLength));
     }
+
+  //Determines if the user wants lower case letters in their password
   var includeLow = confirm("Would you like to include lower case letters in your password?");
     if (includeLow){
       totalPass += lowCase;
-      console.log("Lower Case");
-      console.log(totalPass);
     }
+    
+  //Determines if the user wants upper case letters in their password
   var includeUp = confirm("Would you like to include upper case letters in your password?");
     if (includeUp) {
       totalPass += upCase;
-      console.log("Upper Case");
-      console.log(totalPass);
     }
+  
+  //Determines if the user wants numbers in the password
   var includeNum = confirm ("Would you like to include numbers in your password?");
     if (includeNum) {
       totalPass += numbers;
-      console.log("numbers");
-      console.log(totalPass);
     }
+  
+  //Determines if the user wants characters in their password
   var includeChar = confirm("Would you like to include special characters in your password?");
     if (includeChar) {
       totalPass += char;
-      console.log("characters");
-      console.log(totalPass);
     }
+  
+  //Makes sure they selcted at least one set of characters
   if (totalPass === "") {
     window.alert("You have to choose at least one set of characters.");
     writePassword();
   }
       
+  //generates the password
   var generatePassword = function () {
     password = "";
-    console.log(passLength);
     var i;
     for (var i = 0; i < passLength; i++) {
       password += totalPass.charAt(Math.floor(Math.random() * totalPass.length));
     }
-    console.log(password); 
   }
 
   generatePassword();
-  console.log(password);
   passwordText.value = password;  
 }
 
@@ -75,4 +73,5 @@ function writePassword() {
 var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
+var passText = document.querySelector('#password');
 generateBtn.addEventListener("click", writePassword);
