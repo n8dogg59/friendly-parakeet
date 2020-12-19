@@ -15,7 +15,7 @@ Generate a random password for the user between 8 and 132 characters.
 * HTML and CSS are used but we only had to modify the javaScript.
 
 ## Website
-https://n8dogg59.github.io/friendly-parakeet/
+https://n8dogg59.github.io/friendly-parakeet/Develop
 
 ## Gitbub Repository
 https://github.com/n8dogg59/friendly-parakeet
