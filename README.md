@@ -21,12 +21,12 @@ https://n8dogg59.github.io/friendly-parakeet/Develop
 https://github.com/n8dogg59/friendly-parakeet
 
 ## Screenshot
-![](develop/lengthPrompt.jpg)
-![](develop/lowerPrompt.jpg)
-![](develop/upperPrompt.jpg)
-![](develop/numberPrompt.jpg)
-![](develop/charPrompt.jpg)
-![](develop/finalpassword.jpg)
+![](/lengthPrompt.jpg)
+![](/lowerPrompt.jpg)
+![](/upperPrompt.jpg)
+![](/numberPrompt.jpg)
+![](/charPrompt.jpg)
+![](/finalpassword.jpg)
 
 ### Contribution
 Created by Nate Schroeder
